@@ -1,0 +1,275 @@
+@import url(navbar.css);
+
+* {
+	/* outline: 1px solid; */
+}
+
+body {
+	background: #8AADCD;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 15vh;
+}
+
+main nav {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	height: 100px;
+	background: #9E3FFD;
+}
+
+main nav h2 {
+	margin-left: 5%;
+	font-size: 2rem;
+	color: white;
+	letter-spacing: 2px;
+}
+
+main nav form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 50px;
+}
+
+main nav .select {
+	margin: 0 20px;
+}
+
+main nav .select label {
+	color: #fff;
+	display: block;
+	padding-left: 5px;
+	margin-bottom: 3px;
+}
+
+main nav .select select {
+	transition: 300ms;
+	color: #9E3FFD;
+	width: 150px;
+	font-size: 1rem;
+	text-transform: capitalize;
+	border-radius: 5px;
+	height: 30px;
+	padding-left: 10px;
+	cursor: pointer;
+	/* appearance: none; */
+}
+
+main nav .select select option {
+	border-top: 1px solid #9E3FFD;
+	height: 50px;
+	display: block;
+}
+
+main nav .select select option:hover {
+	background: #9E3FFD;
+	color: #fff;
+}
+
+main nav .input {
+	margin-left: 5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fff;
+	width: 400px;
+	height: 40px;
+	border-radius: 30px;
+	overflow: hidden;
+}
+
+main nav .input input {
+	width: 90%;
+	background: transparent;
+	/* border: none; */
+	color: #9E3FFD;
+	height: 100%;
+	padding-left: 15px;
+	font-size: 1.2rem;
+	cursor: text;
+}
+
+main nav .input button {
+	height: 100%;
+	width: 15%;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+}
+
+main nav .input button i {
+	color: #9E3FFD;
+	font-size: 1.2rem;
+}
+
+main>span {
+	color: #ffffff;
+	font-size: 1.3rem;
+	margin-top: 20px;
+}
+
+main .container {
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-between;
+	width: 80vw;
+	flex-wrap: wrap;
+}
+
+main .container .card {
+	width: 500px;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+	border: 3px solid #242424;
+	border-radius: 5px;
+	box-shadow: 3px 3px 0px #5D80ED;
+	margin: 0 10px 30px 10px;
+}
+
+main .container .card:hover>img {
+	transform: scale(1.05);
+}
+
+main .container .card:hover>.tags {
+	opacity: 1;
+}
+
+main .container .card:hover>button.owner {
+	opacity: 1;
+}
+
+main .container .card:hover>.details {
+	transform: translateY(0px);
+}
+
+main .container .card img {
+	height: 100%;
+	width: 100%;
+	transition: 300ms ease-in-out;
+}
+
+main .container .card .tags {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	display: flex;
+	width: 65%;
+	flex-wrap: wrap;
+	opacity: 0;
+	transition: 300ms ease-in-out;
+}
+
+main .container .card .tags a {
+	display: block;
+	color: #fff;
+	background: #242424;
+	margin: 5px;
+	padding: 5px 15px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1rem;
+	text-transform: capitalize;
+}
+
+main .container .card .owner {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	padding: 8px 20px;
+	border-radius: 10px;
+	background: rgb(255, 255, 255);
+	font-size: 1.2rem;
+	font-weight: bold;
+	border: 2px solid #7d7d7d;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: 300ms ease-in-out;
+}
+
+main .container .card .owner:hover {
+	background: rgb(231, 231, 231);
+}
+
+main .container .card .owner img {
+	width: 20px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+main .container .card .owner span {
+	color: #4c4c4c;
+	cursor: pointer;
+	text-transform: capitalize;
+}
+
+main .container .card .details {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	transform: translateY(60px);
+	background: rgba(0, 0, 0, 0.499);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #fff;
+	padding: 0 30px;
+	transition: 300ms ease-in-out;
+}
+
+main .container .card .details .likes {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main .container .card .details .likes i {
+	font-size: 2rem;
+	cursor: pointer;
+	margin-right: 5px;
+	color: #fff;
+}
+
+main .container .card .details .likes i:hover {
+	color: #b40000;
+
+}
+
+main .container .card .details .likes span {
+	font-size: 1.3rem;
+}
+
+main .container .card .details>span {
+	font-size: 1.6rem;
+	display: inline-block;
+	text-transform: capitalize;
+
+}
+
+main .container .card .details button {
+	padding: 8px;
+	border-radius: 5px;
+	border: none;
+	background: #67b0f0;
+	cursor: pointer;
+}
+
+main .container .card .details button:hover {
+	background: #538ec1;
+}
+
+main .container .card .details button i {
+	font-size: 1.5rem;
+	color: #fff;
+	cursor: pointer;
+}

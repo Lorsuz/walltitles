@@ -1,0 +1,106 @@
+body {
+	background: #8AADCD;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 15vh;
+}
+
+main nav {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	height: 100px;
+	background: #9E3FFD;
+	margin-bottom: 30px;
+	justify-content: space-between; 
+	padding: 0 5%; 
+}
+
+main nav h2 {
+	font-size: 2rem;
+	color: white;
+	letter-spacing: 2px;
+}
+
+main nav button {
+	padding: 8px 10px;
+	border-radius: 10px; 
+}
+main nav button i{
+	font-size: 1.2rem;  
+	margin-right: 5px; 
+	color: #9E3FFD;
+}
+main nav button span{
+	font-size: 1.2rem;
+color: #9E3FFD;
+}
+
+main .container {
+	width: 85%; 
+	display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;  
+}
+
+main .container .card {
+	width: 350px; 
+	height: 200px;  
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+	position: relative;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	box-shadow: 0px 0px 0px 3px #5D80ED;
+	background: rgb(231, 231, 231);
+}
+
+main .container .card .img {
+	width: 50%; 
+	height: 50%;
+	overflow: hidden;
+}
+
+main .container .card .img img {
+	width: 100%;
+	height: 100%;
+}
+
+main .container .card .bar {
+	position: absolute;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.494);
+	bottom: 0; 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+	height: 25%; 
+}
+
+main .container .card .bar h3 {
+	font-size: 1.7rem;
+	color: #ffffff;
+}
+
+main .container .card .bar button {
+	padding: 8px 15px;
+	border-radius: 10px ; 
+box-shadow: 0 0 0px 0px #ffffff;
+}
+
+main .container .card .bar button i {
+	font-size: 1.3rem;
+	margin-right: 5px;
+	color: #9E3FFD;
+}
+
+main .container .card .bar button span {
+	font-size: 1rem;
+	color: #9E3FFD; 
+}

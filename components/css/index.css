@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 1rem;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	/* outline: 1px solid;  */
+	color: black;
+}
+
+body {
+	height: 100vh;
+	overflow: hidden;
+}
+body>ul>li{
+	display: block;
+	position: absolute;
+		top: -120px;
+		animation: up 3s infinite alternate;
+		border-radius: 20%;
+}
+@keyframes up {
+  from {
+    opacity: 0;
+		transform: translateY(0px) rotate(900deg);
+  }
+  50% {
+		opacity: 0.3;
+  }
+  to {
+		opacity: 0;
+		transform: translateY(110vh) rotate(0deg);
+  }
+}
+body > div.background {
+	position: absolute;
+	width: 100vw;
+	z-index: -1;
+	transform: scaleX(-1);
+	height: 100vh;
+	background: url(../img/wallpaper-lines-blue.png) no-repeat;
+	background-position: 0 150px;
+	background-size: 100% 100%;
+}
+
+body header {
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	align-items: center;
+}
+
+body header h2 {
+	font-size: 2rem;
+	font-family: Kalam;
+	margin-left: 40px;
+	cursor: default;
+	user-select: none;
+}
+
+body header ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 60%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+body header ul li {
+	margin: 0 20px;
+}
+
+body header ul li a {
+	font-size: 1.3rem;
+	font-weight: 300;
+	letter-spacing: 1px;
+	color: #16163F;
+	transition: 300ms;
+}
+
+body header ul li a.active,
+body header ul li a:hover {
+	color: #9E3FFD;
+}
+
+body main {
+	display: flex;
+	height: 70vh;
+}
+
+body main > div {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+body main > div.left {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+body main > div.left {
+	width: 70%;
+	justify-content: end;
+}
+
+body main > div.left div.content {
+	width: 80%;
+	transform: translateX(-30px);
+}
+
+body main > div.left div.content > span.wellcome {
+	font-size: 2.5rem;
+	display: block;
+	transform: translateY(20px);
+	color: #393939;
+	font-style: italic;
+}
+
+body main > div.left div.content h1 {
+	font-size: 7rem;
+	font-weight: 900;
+	font-family: 'Kalam', cursive;
+	color: #16163F;
+}
+
+body main > div.left div.content p {
+	font-size: 1.3rem;
+	width: 100%;
+	color: #393939;
+	transform: translateY(-30px);
+}
+
+body main > div.left div.content div.acount {
+	margin: 30px 0;
+	width: 100%;
+	display: flex;
+	/* justify-content: center; */
+}
+
+body main > div.left div.content div.acount > a {
+	display: inline-block;
+	background: #9E3FFD;
+	letter-spacing: 2px;
+	border-radius: 30px;
+	margin: 0 60px 0 0;
+	border: 2px solid #9E3FFD;
+	width: 150px;
+	text-align: center;
+	padding: 10px;
+	font-weight: 700;
+	font-size: 1.3rem;
+	color: rgb(255, 255, 255);
+	transition: 300ms;
+}
+
+body main > div.left div.content div.acount a:first-child:hover {
+	color: #9E3FFD;
+	background: rgb(255, 255, 255);
+	letter-spacing: 3px;
+}
+
+body main > div.left div.content div.acount a:last-child {
+	color: #9E3FFD;
+	background: transparent;
+}
+
+body main > div.left div.content div.acount a:last-child:hover {
+	letter-spacing: 3px;
+	display: inline-block;
+	background: #9E3FFD;
+	color: rgb(255, 255, 255);
+}
+
+body main > div.left div.content div.acount > span:last-child {
+	color: #008c13;
+}
+
+body main > div.right img {
+	transform: translateX(-50px);
+}

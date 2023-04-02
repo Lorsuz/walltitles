@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Welcome to Walltitles</title>
+		<link rel="shortcut icon" href="img/robot-blue.png" type="image/x-icon">
+		<link rel="stylesheet" href="components/css/index.css">
+	</head>
+
+	<body>
+		<ul></ul>
+		<div class="background">
+		</div>
+		<header>
+			<h2>WallTitles</h2>
+			<ul>
+				<li><a href="#" class="active">Capa</a></li>
+				<li><a href="http://lorsuz.github.io/wooshol" target="_blank">Serviços</a></li>
+				<li><a href="http://lorsuz.github.io/portfolio" target="_blank">Portifolio</a></li>
+				<li><a href="http://github.com/lorsuz" target="_blank">Desenvolvedores</a></li>
+				<li><a href="components/views/Monetization.php">Apoie-nos</a></li>
+			</ul>
+		</header>
+		<main>
+			<div class="left">
+				<div class="content">
+					<span class="wellcome">Bem Vindo</span>
+					<h1>WallTitles!!</h1>
+					<p>A melhor plataforma para listar suas obras favoritas <br> e ainda conseguir belos papeis de parede para suas coleções!!</p>
+					<div class="acount">
+						<a class="" href="components/views/sign.html">Log In</a>
+						<a class="" href="#">Sign Up</a>
+					</div>
+				</div>
+			</div>
+			<div class="right">
+				<img src="components/img/robot-blue.png" alt="">
+			</div>
+		</main>
+		<script>
+			const ul = document.querySelector( "body > ul" );
+
+			const random = ( min, max ) => Math.random() * ( max - min ) + min;
+			// const randomColors = [ "#8400ff", "#2bff00", "#eaff00" ];
+
+			for ( let i = 0; i < 15; i++ ) {
+				const li = document.createElement( "li" );
+
+				const size = Math.floor( random( 50, 120 ) );
+				const position = random( 1, 94 );
+				const delay = random( 3, 1 );
+				const duration = random( 10, 40 );
+				var randomColors=[]
+
+				li.style.width = `${ size }px`;
+				li.style.height = `${ size }px`;
+
+				// li.style.backgroundColor = randomColors[ Math.floor( random( 0, 3 ) ) ];
+				for (let index = 0; index < 3; index++) {
+					randomColors[index] = Math.floor( random( 0, 255 ) )
+				}
+				console.log(`rgb(${randomColors[0]},${randomColors[1]},${randomColors[2]})`)
+				li.style.backgroundColor = `rgb(${randomColors[0]},${randomColors[1]},${randomColors[2]})`;
+
+				li.style.left = `${ position }%`;
+
+				li.style.animationDelay = `${ delay }s`;
+				li.style.animationDuration = `${ duration }s`;
+
+				li.style.animationTimingFunction = `cubic-bezier(${ Math.random() }, ${ Math.random() }, ${ Math.random() }, ${ Math.random() })`;
+
+				ul.appendChild( li );
+			}
+		</script>
+	</body>
+
+</html>

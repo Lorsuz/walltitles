@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Sign-Up-In</title>
+		<link rel="stylesheet" href="../css/sign.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	</head>
+
+	<body>
+		<div class="box-cut"> </div>
+		<section class="form">
+			<div class="in">
+				<h1>sign in</h1>
+				<form action="wallpapers.php" autocomplete="off">
+
+					<div>
+						<i class="fa-solid fa-envelope"></i>
+						<input placeholder=" " type="text" autocomplete="off" name="email_in" id="email_in" value="">
+						<label for="email_in">E-mail</label>
+						<span></span>
+					</div>
+
+					<div>
+						<i class="fa-solid fa-lock"></i>
+						<input placeholder=" " type="password" autocomplete="off" name="password_in" id="password_in" value="">
+						<label for="password_in">Password</label>
+						<span></span>
+					</div>
+
+					<button type="submit"> <span></span>SIGN IN</button>
+
+				</form>
+				<div><span>Ainda não possue uma conta? </span><span class="toggle">Sign Up</span></div>
+			</div>
+			<div class="up">
+				<h1>sign up</h1>
+				<form action="wallpapers.php">
+
+					<div>
+						<i class="fa-solid fa-user"></i>
+						<input placeholder=" " type="text" name="nickname_up" id="nickname_up" value="">
+						<label for="nickname_up">Nickname</label>
+						<span></span>
+					</div>
+
+					<div>
+						<i class="fa-solid fa-envelope"></i>
+						<input placeholder=" " type="text" autocomplete="off" name="email_up" id="email_up" value="">
+						<label for="email_up">E-mail</label>
+						<span></span>
+					</div>
+
+					<div>
+						<i class="fa-solid fa-lock-open"></i>
+						<input placeholder=" " type="password" autocomplete="off" name="password_up" id="password_up" value="">
+						<label for="password_up">Password</label>
+						<span></span>
+					</div>
+
+					<div>
+						<i class="fa-solid fa-lock"></i>
+						<input placeholder=" " type="password" name="confirmPassword_up" id="confirmPassword_up" value="">
+						<label for="confirmPassword_up">Confirm Password</label>
+						<span></span>
+					</div>
+
+					<button type="submit"> <span></span> SIGN UP</button>
+
+				</form>
+				<div><span>Já possue uma conta? </span><span class="toggle">Sign In</span></div>
+			</div>
+		</section>
+		<section class="MSG">
+			<div class="up">
+				<div class="content">
+					<h1>Seja <br> Bem Vindo!!</h1>
+					<p>Se for sua primeira vez por aqui<br> cadastre o seu melhor <br> E-mail!</p>
+				</div>
+			</div>
+			<div class="in">
+				<div class="content">
+					<h1>WELCOME <br> BACK!!</h1>
+					<p>Bem vindo de volta! <br> Sentimos muito <br> sua falta! </p>
+				</div>
+			</div>
+		</section>
+		<script> var toggleIsOn = false;
+			var button = document.querySelectorAll( 'body section.form > div > div span.toggle' );
+			var boxCut = document.querySelector( 'body > div.box-cut' );
+			var body = document.querySelector( 'body' );
+			for ( let index = 0;
+				index < button.length;
+				index++ ) {
+				button[ index ].addEventListener( 'click', () => {
+					animarToggle();
+				} );
+			} function animarToggle () {
+				console.log( toggleIsOn );
+				if ( toggleIsOn == false ) {
+					boxCut.classList.remove( "toggle-in" );
+					boxCut.classList.add( "toggle-up" );
+					// boxCut.style.animation = 'rolar-up 1000ms linear forwards';
+					toggleIsOn = true;
+					body.classList.add( "active" );
+				} else {
+					boxCut.classList.remove( "toggle-up" );
+					boxCut.classList.add( "toggle-in" );
+					// boxCut.style.animation = 'rolar-in 1000ms linear ';
+					toggleIsOn = false;
+					body.classList.remove( "active" );
+				}
+			} </script>
+	</body>
+
+</html>
